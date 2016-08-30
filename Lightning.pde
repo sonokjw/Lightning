@@ -6,14 +6,14 @@ int endX = 200;
 
 void setup()
 {
-	strokeWeight(5);
+	strokeWeight(2);
 	background(0);
 	size(400,400);
 }
 void draw()
 {
 	stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
-	while(endY <= 400){
+	while(endY <= 350){
 		endY = startY + (int)(Math.random()*10);
 		endX = startX + (int)(Math.random()*19)-9;
 		line(startX, startY, endX, endY);
