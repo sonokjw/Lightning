@@ -7,11 +7,11 @@ int endX = 200;
 void setup()
 {
 	strokeWeight(2);
-	background(0);
 	size(400,400);
 }
 void draw()
 {
+	background(0);
 	stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
 	while(endY <= 350){
 		endY = startY + (int)(Math.random()*10);
@@ -20,10 +20,15 @@ void draw()
 		startX = endX;
 		startY = endY;
 	}
+	fill(54, 132, 30);
+	noStroke();
+	ellipse(200, 400, 600, 100);
 }
+
 void mousePressed()
 {
-	stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
+	background(255);
+	stroke((int)(Math.random()*200), (int)(Math.random()*250), (int)(Math.random()*250));
 	startY = 0;
 	startX = 200;
 	endY = 0;
